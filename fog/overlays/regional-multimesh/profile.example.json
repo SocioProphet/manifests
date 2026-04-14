@@ -1,0 +1,39 @@
+{
+  "profile_id": "regional-multimesh-demo",
+  "mode": "regional-multimesh",
+  "posture_state": "fleet_managed",
+  "site_topology": {
+    "sites": [
+      {
+        "site_id": "region-east-1",
+        "trust_zone": "regional"
+      }
+    ]
+  },
+  "enabled_subsystems": [
+    "dashboard-bff",
+    "topology-api",
+    "telemetry-normalizer",
+    "policy-gateway",
+    "planner-api"
+  ],
+  "local_only_data_classes": [
+    "camera_sensitive"
+  ],
+  "exportable_data_classes": [
+    "aggregated_metrics",
+    "artifact_manifests",
+    "alerts",
+    "placement_recommendations"
+  ],
+  "requires_attestation": true,
+  "dashboard_surfaces": [
+    "overview",
+    "map",
+    "topology",
+    "security",
+    "planner",
+    "artifacts",
+    "ai-ops"
+  ]
+}
