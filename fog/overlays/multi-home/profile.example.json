@@ -1,0 +1,41 @@
+{
+  "profile_id": "multi-home-demo",
+  "mode": "multi-home",
+  "posture_state": "fleet_managed",
+  "site_topology": {
+    "sites": [
+      {
+        "site_id": "site-alpha",
+        "trust_zone": "local"
+      },
+      {
+        "site_id": "site-beta",
+        "trust_zone": "private-mesh"
+      }
+    ]
+  },
+  "enabled_subsystems": [
+    "dashboard-bff",
+    "topology-api",
+    "telemetry-normalizer",
+    "policy-gateway",
+    "planner-api"
+  ],
+  "local_only_data_classes": [
+    "rf_raw"
+  ],
+  "exportable_data_classes": [
+    "aggregated_metrics",
+    "artifact_manifests",
+    "alerts"
+  ],
+  "requires_attestation": true,
+  "dashboard_surfaces": [
+    "overview",
+    "map",
+    "topology",
+    "security",
+    "planner",
+    "artifacts"
+  ]
+}
