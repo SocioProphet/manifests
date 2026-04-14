@@ -1,0 +1,24 @@
+{
+  "site_id": "site-seed-demo",
+  "nodes": [
+    {"id": "node-gw-1", "kind": "node", "trust_zone": "local", "status": "ready"},
+    {"id": "rf-sensor-1", "kind": "sensor", "trust_zone": "local", "status": "ready"},
+    {"id": "svc-dashboard-bff", "kind": "service", "trust_zone": "local", "status": "degraded"}
+  ],
+  "edges": [
+    {"source": "node-gw-1", "target": "rf-sensor-1", "relation": "hosts"},
+    {"source": "node-gw-1", "target": "svc-dashboard-bff", "relation": "runs"}
+  ],
+  "rf_sample": {
+    "site": "site-seed-demo",
+    "timestamp": "2026-04-12T12:00:00Z",
+    "band": "2.4GHz",
+    "noise_floor_dbm": -91.3,
+    "channel_utilization_pct": 42.5,
+    "interference_score": 0.38,
+    "ble_observed_devices": 12,
+    "zigbee_channel_activity_pct": 6.2,
+    "backhaul_rtt_ms": 24.0,
+    "backhaul_packet_loss_pct": 0.4
+  }
+}
