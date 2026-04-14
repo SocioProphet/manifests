@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fog-dashboard-surfaces
+  namespace: fog-system
+data:
+  surfaces.json: |
+    {
+      "surfaces": ["overview", "map", "topology", "cluster-ops", "devices", "rf-network", "security", "planner", "artifacts", "incidents"]
+    }

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fog-profile
+  namespace: fog-system
+data:
+  profile.json: |
+    {
+      "profile_id": "fog-base",
+      "mode": "single-home",
+      "posture_state": "local_operational",
+      "enabled_subsystems": ["dashboard-bff", "topology-api", "telemetry-normalizer"],
+      "dashboard_surfaces": ["overview", "map", "topology", "security", "artifacts"]
+    }
