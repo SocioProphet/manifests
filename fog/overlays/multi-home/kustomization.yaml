@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../base
+
+configMapGenerator:
+  - name: fog-profile-override
+    namespace: fog-system
+    literals:
+      - profile_id=multi-home-demo
+      - mode=multi-home
+      - posture_state=fleet_managed
+generatorOptions:
+  disableNameSuffixHash: true
